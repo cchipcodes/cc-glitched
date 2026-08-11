@@ -1299,5 +1299,20 @@ export const ParticleEmissionTrait = J.defineTrait(
     },
 );
 
+export const TextLabelTrait = J.defineTrait(
+    "textLabel",
+    S.object({
+        text: S.string({ label: "Text", defaultValue: "3D TEXT"}),
+        updateTime: S.number({ label: "Update Every", defaultValue: 5, optional: true}),
+        offset: S.vec3({ label: "Offset", defaultValue: [0,0,0], optional: true}),
+    }),
+    {
+        name: "3D Text Label",
+        description: "Shows a 3D text.",
+        icon: "🪧",
+        color: "#cdcd80",
+    },
+);
+
 
 export const DEFAULT_TIME_LEADERBOARD = "template_best_times_v1";

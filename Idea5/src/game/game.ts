@@ -64,6 +64,20 @@ export function gameServerTasks() {
     abilitySwitch();
     abilityDisable();
     abilities.playerAttacked();
+    spawnTextLabel();
+};
+
+function spawnTextLabel() {
+    const allEntities = J.getAllWithTraits([traits.TextLabelTrait]);
+    for (let ent of allEntities) {
+        const entPos = J.getEntityPosition(ent[0]);
+        const offset = ent[1].offset;
+        J.spawnText3D(ent[1].text, 32, 50, true, [
+            entPos[0] + offset[0], 
+            entPos[1] + offset[1],
+            entPos[2] + offset[2]
+        ], [0,0,0]);
+    };
 };
 
 export function spawnLoot() {
