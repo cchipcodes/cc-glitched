@@ -1119,7 +1119,7 @@ export const EnemyTrait = J.defineTrait(
             { label: "Bishop", value: "Bishop" },
             { label: "King", value: "King" },
             { label: "Queen", value: "Queen" }
-        ]}),
+        ], defaultValue: "Pawn"}),
     }),
     {
         name: "Enemy",
@@ -1304,7 +1304,7 @@ export const TextLabelTrait = J.defineTrait(
     S.object({
         text: S.string({ label: "Text", defaultValue: "3D TEXT"}),
         updateTime: S.number({ label: "Update Every", defaultValue: 5, optional: true}),
-        offset: S.vec3({ label: "Offset", defaultValue: [0,0,0], optional: true}),
+        offset: S.vec3({ label: "Offset", defaultValue: [0,0,0] }),
     }),
     {
         name: "3D Text Label",
