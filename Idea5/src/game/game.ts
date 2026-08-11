@@ -80,7 +80,7 @@ function spawnTextLabel() {
     };
 };
 
-export function spawnLoot() {
+function spawnLoot() {
     J.onEntityCollisionStart({ source: [traits.PlayerTrait], target: [traits.ChestTrait] }, (_, chest) => {
         let x = 3;
         const chestPos = J.getEntityPosition(chest);
@@ -101,7 +101,7 @@ export function spawnLoot() {
     });
 };
 
-export function interactWithUpgrade() {
+function interactWithUpgrade() {
     J.onEntityCollisionStart({ source:[traits.PlayerTrait], target: [traits.LootCardTrait]}, (plr, loot) => {
         const playerAbilities = J.getTrait(plr, traits.PlayerAbilitiesTrait);
         const lootCard = J.getTrait(loot, traits.LootCardTrait);
@@ -211,7 +211,7 @@ function particleEmission() {
     };
 };
 
-export function HUD() {
+function HUD() {
     const plr = J.getLocalPlayer();
     // Device Identifier
         //Stats HUD Panel
@@ -292,7 +292,7 @@ function checkHealth(entity: J.EntityId) {
     return health;
 };
 
-export function abilitySwitch() {
+function abilitySwitch() {
     if (J.net.isClient) {
         const plr = J.getLocalPlayer()
         J.onControlPress("KeyE", (playerId) => {
@@ -308,7 +308,7 @@ export function abilitySwitch() {
     };
 };
 
-export function abilityDisable() {
+function abilityDisable() {
     if (J.net.isClient) {
         const plr = J.getLocalPlayer();
         J.onControlPress("KeyQ", (playerId) => {

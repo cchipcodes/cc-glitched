@@ -261,7 +261,7 @@ export function switchCard(plr: J.EntityId) {
     });
 };
 
-export function useCard(type: string, cooldown: number, plr: J.EntityId) {
+function useCard(type: string, cooldown: number, plr: J.EntityId) {
     if (J.getTrait(plr, traits.HeldItemTrait) && J.getTrait(plr, traits.ProjectileSpawnerTrait)) {
         J.removeTrait(plr, traits.HeldItemTrait);
         J.removeTrait(plr, traits.ProjectileSpawnerTrait);
