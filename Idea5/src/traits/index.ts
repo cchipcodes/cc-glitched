@@ -1303,7 +1303,6 @@ export const TextLabelTrait = J.defineTrait(
     "textLabel",
     S.object({
         text: S.string({ label: "Text", defaultValue: "3D TEXT"}),
-        updateTime: S.number({ label: "Update Every", defaultValue: 5, optional: true}),
         offset: S.vec3({ label: "Offset", defaultValue: [0,0,0] }),
     }),
     {
