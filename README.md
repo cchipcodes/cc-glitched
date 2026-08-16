@@ -9,7 +9,7 @@ The game can be played on the [Jamango! website](https://jamango.io/game/EC5DD/c
 Anyone can take a look at the code and make their own game using it. Here's how:
 
 ## 1. Remix on Jamango!
-Go to the game page linked above and click"Play Now". Next, go to the home menu (H) and click on the Remix Game button. This creates a version of the game that you own and that can be modified.
+Go to the game page linked above and click "Play Now". Next, go to the home menu (H) and click on the Remix Game button. This creates a version of the game that you own and that can be modified.
 
 ## 2. Copy from GitHub
 The other method is to download or clone this GitHub repository, following a similar process as the [Jamango Template](https://github.com/JamangoGame/template#bring-these-traits-into-an-existing-world). Once you've saved this on your local drive, go to the [Jamango Creator Hub](https://jamango.io/create/worlds) a new world. Next, open the script editor (J) and click on the connect folder button. When asked, chose **Folder to Browser**, as this will bring the local code to the world. This will open your file explorer. Navigate to the **Idea5** folder in where you saved the project and click Open. This will connect your local project to the world, allowing you to use a local IDE to edit the code.
