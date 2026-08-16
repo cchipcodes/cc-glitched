@@ -3,7 +3,7 @@ import * as traits from "../traits/index";
 import * as abilities from "./abilities";
 import * as hudkit from "../client/hud-kit";
 import * as commands from "../shared/commands";
-import { wait } from "../shared/utils";
+import { wait, randomIntFromInterval } from "../shared/utils";
 import { command } from "./reset";
 
 // Constants and Variables
@@ -330,12 +330,4 @@ function abilityDisable() {
             });
         });
     };
-};
-
-// Source - https://stackoverflow.com/a/7228322
-// Posted by Francisc, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-07-31, License - CC BY-SA 4.0
-
-function randomIntFromInterval(min, max) { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min);
 };
