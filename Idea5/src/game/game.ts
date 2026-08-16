@@ -5,6 +5,7 @@ import * as hudkit from "../client/hud-kit";
 import * as commands from "../shared/commands";
 import { wait, randomIntFromInterval } from "../shared/utils";
 import { command } from "./reset";
+import { randomGlitchStatements } from "./chatEvents";
 
 // Constants and Variables
 let healthUI: HTMLDivElement | undefined;
@@ -65,6 +66,7 @@ export function gameServerTasks() {
     abilityDisable();
     abilities.playerAttacked();
     spawnTextLabel();
+    randomGlitchStatements();
 };
 
 function spawnTextLabel() {

@@ -5,6 +5,7 @@ import * as commands from "../shared/commands";
 import { wait } from "../shared/utils";
 import { activateBeacon } from "./game";
 import { setInitialMovementSettings } from "../config";
+import { sendDeathMessage } from "./chatEvents";
 
 export function damageEnemy() {
     //blank
@@ -230,7 +231,8 @@ export function damagePlayer(d: number, plr: J.EntityId, t: number, pos: J.Vec3)
             });
             currentHealth = J.getTrait(plr, traits.PlayerTrait).health
             if (currentHealth <= 0) {
-                server.killPlayer(plr, t)
+                sendDeathMessage(plr);
+                server.killPlayer(plr, t);
                 setInitialMovementSettings(plr);
             };
         };
